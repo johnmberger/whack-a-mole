@@ -1,18 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LoginOrRegister v-if="!loggedIn"/>
+    <Game v-if="loggedIn"/>
+    <HighScores v-if="loggedIn"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState, mapGetters } from 'vuex';
+import Game from './components/Game.vue';
+import HighScores from './components/HighScores';
+import LoginOrRegister from './components/Login';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    Game,
+    HighScores,
+    LoginOrRegister,
+  },
+  computed: {
+    ...mapState({
+      token: state => state.token,
+    }),
+    ...mapGetters({
+      loggedIn: 'game/loggedIn',
+    })
+  },
 }
 </script>
 
