@@ -36,17 +36,23 @@ const actions = {
     } catch (err) {
       commit('registerError');
     }
-  }
+  },
+  logout: ({ commit }) => {
+    commit('logout')
+  },
 }
+
 // mutations
 const mutations = {
   setToken(state, data) {
     state.error = false;
     state.token = data.token;
+    state.username = data.username;
   },
 
   logout(state) {
     state.token = null;
+    state.username = null;
   },
 
   loginFailure(state) {

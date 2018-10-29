@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = process.env.BASE_URL || 'localhost:3000';
+const BASE_URL = 'https://whackamole-.herokuapp.com';
 
 export default {
   getHighScores() {
@@ -8,12 +8,12 @@ export default {
       url: `${BASE_URL}/scores`,
     });
   },
-  postNewScore({ score, token }) {
+  postNewScore({ username, score }) {
     return axios({
       method: 'post',
       url: `${BASE_URL}/scores/new`,
       data: {
-        token,
+        username,
         score,
       },
     });
