@@ -52,7 +52,7 @@ export default {
   height: 100vh;
   text-align: center;
   color: #2c3e50;
-  background: url('/bg.png');
+  background: url('assets/bg.png');
 }
 body {
   margin: 0px;

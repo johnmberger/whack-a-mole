@@ -26,7 +26,7 @@
             class="mole"
             v-on:click="onClick(index)"
           >
-            <img src="mole.svg" class="img" onmousedown="return false">
+            <img src="assets/mole.svg" class="img" onmousedown="return false">
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  cursor: url('/mallet.png'), auto;
+  cursor: url('assets/mallet.png'), auto;
 }
 .hole {
   width: 30%;
