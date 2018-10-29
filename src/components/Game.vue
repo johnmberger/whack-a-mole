@@ -26,7 +26,7 @@
             class="mole"
             v-on:click="onClick(index)"
           >
-            <img src="../assets/mole.svg" class="img" onmousedown="return false">
+            <img :src="imageUrl" class="img" onmousedown="return false" />
           </div>
         </div>
       </div>
@@ -44,9 +44,15 @@
 
 <script>
 import { mapState } from 'vuex';
+import mole from '../assets/mole.svg';
 
 export default {
   name: 'Game',
+  data() {
+    return {
+      imageUrl: mole,
+    }
+  },
   computed: {
     ...mapState({
       activeMole: state => state.game.activeMole,
