@@ -11,7 +11,7 @@
           You Scored: {{ currentScore }}
         </div>
         <div class="buttons">
-          <button class="btn" v-on:click="startGame">Save Score</button>
+          <button class="btn" v-on:click="sendNewScore">Save Score</button>
           <button class="btn" v-on:click="reset">Discard Score</button>
         </div>
       </div>

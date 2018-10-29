@@ -1,12 +1,14 @@
 {
   "name": "whack-a-mole",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
+  "homepage": "https://github.com/johnmberger/whack-a-mole",
   "dependencies": {
     "axios": "^0.18.0",
     "jwt-simple": "^0.5.5",
@@ -19,6 +21,7 @@
     "@vue/cli-service": "^3.0.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
