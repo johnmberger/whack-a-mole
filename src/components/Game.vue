@@ -26,7 +26,7 @@
             class="mole"
             v-on:click="onClick(index)"
           >
-            <img src="<%= BASE_URL %>mole.svg" class="img" onmousedown="return false" />
+            <img src="mole.svg" class="img" onmousedown="return false" />
           </div>
         </div>
       </div>
